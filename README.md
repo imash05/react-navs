@@ -12,7 +12,7 @@ npm install --save react-navs
 
 ## Usage
 
-```jsx
+<!-- ```jsx
 import React, { Component } from 'react'
 
 import MyComponent from 'react-navs'
@@ -23,7 +23,7 @@ class Example extends Component {
     return <MyComponent />
   }
 }
-```
+``` -->
 
 ## License
 
