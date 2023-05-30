@@ -2,9 +2,9 @@
   "name": "react-navs",
   "version": "1.0.4",
   "description": "React-Navs: A library for creating customized and integrated navigation bars in React",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --extensions \".ts\" -d dist"
   },
   "repository": {
     "type": "git",
@@ -17,13 +17,22 @@
   },
   "homepage": "https://github.com/imash05/react-navs#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.0",
-    "@rollup/plugin-node-resolve": "^15.1.0",
-    "@rollup/plugin-typescript": "^11.1.1",
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
+    "@babel/preset-typescript": "^7.21.5",
     "@types/react": "^18.2.7",
     "react": "^18.2.0",
-    "rollup": "^3.23.0",
-    "rollup-plugin-dts": "^5.3.0",
-    "typescript": "^5.0.4"
-  }
+    "rollup": "^2.60.0",
+    "ts-loader": "^9.4.3",
+    "typescript": "^5.0.4",
+    "webpack": "^5.84.1",
+    "webpack-cli": "^5.1.1"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
 }
