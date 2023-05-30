@@ -1,0 +1,31 @@
+# File di build
+build/
+dist/
+out/
+
+# Dipendenze
+node_modules/
+
+# File di configurazione IDE
+.idea/
+.vscode/
+*.iml
+
+# File di log
+logs/
+*.log
+
+# Altri file temporanei
+.tmp/
+.temp/
+.temp-*
+
+# File di ambiente
+.env
+.env.local
+
+# Altri file generati
+*.cache
+*.bak
+*.swp
+.DS_Store
