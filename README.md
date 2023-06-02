@@ -32,12 +32,12 @@ Thank you for your understanding and interest in React-Navs!
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-navs'
-import 'react-navs/dist/index.css'
+import Rnavs from 'react-navs'
+
 
 class Example extends Component {
   render() {
-    return <MyComponent /> //not work
+    return <Rnavs  /> //not work
   }
 }
 ``` 
