@@ -32,15 +32,27 @@ Thank you for your understanding and interest in React-Navs!
 ```jsx
 import React, { Component } from 'react'
 
-import Rnavs from 'react-navs'
+import { RNDefault } from 'react-navs'
 
 
 class Example extends Component {
   render() {
-    return <Rnavs  /> //not work
+    return (
+    <RNDefault 
+      title: "Brand",
+      subTitle: "brand subtitle",
+      btn: "Button",
+      navItems: [
+        { label: "Home", link: "/" },
+        { label: "About", link: "/about" },
+        { label: "Contact", link: "/contact" },
+      ],
+    /> );//not work
   }
 }
 ``` 
+![example](https://i.ibb.co/bs98P31/Screenshot-2023-06-04-151542.png)
+
 
 
 ## Roadmap
