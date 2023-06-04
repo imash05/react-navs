@@ -1,31 +1,39 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react";
 
-import './style.scss'
-import Navbar, { NavbarProps } from "./reactnavs";
+import "./style.scss";
+import { RNDefault, RNDark, NavbarProps } from "./reactnavs";
 
 export default {
   title: "Components/Navbar",
-  component: Navbar,
+  component: RNDefault,
+  argTypes: {
+    title: { control: "text" },
+    navItems: { control: "array" },
+  },
 } as Meta;
 
-const Template: Story<NavbarProps> = (args) => <Navbar {...args} />;
+const Template: Story<NavbarProps> = (args) => <RNDefault {...args} />;
+const DarkTemplate: Story<NavbarProps> = (args) => <RNDark {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
+  title: "Brand",
+  subTitle: "brand subtitle",
+  btn: "Button",
   navItems: [
-    { title: "Home", url: "/" },
-    { title: "About", url: "/about" },
-    { title: "Contact", url: "/contact" },
+    { label: "Home", link: "/" },
+    { label: "About", link: "/about" },
+    { label: "Contact", link: "/contact" },
   ],
 };
 
-export const WithTitle = Template.bind({});
-WithTitle.args = {
+export const dark = DarkTemplate.bind({});
+dark.args = {
   title: "My Navbar",
   navItems: [
-    { title: "Home", url: "/" },
-    { title: "About", url: "/about" },
-    { title: "Contact", url: "/contact" },
+    { label: "Home", link: "/" },
+    { label: "About", link: "/about" },
+    { label: "Contact", link: "/contact" },
   ],
 };
