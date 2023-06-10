@@ -28,12 +28,3 @@ Default.args = {
   ],
 };
 
-export const dark = DarkTemplate.bind({});
-dark.args = {
-  title: "My Navbar",
-  navItems: [
-    { label: "Home", link: "/" },
-    { label: "About", link: "/about" },
-    { label: "Contact", link: "/contact" },
-  ],
-};
